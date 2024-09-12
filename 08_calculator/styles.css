@@ -1,0 +1,130 @@
+* {
+    font-family: 'Jacquard 12', sans-serif;
+    font-size: 20px;
+}
+body {
+    background-image: url('img/background-imgg.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #ffccd5;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.jacquard-12-regular {
+  font-family: "Jacquard 12", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#calc {
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: auto;
+    left: 69%;
+    width: 300px;
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 100%;
+    padding: 10px;
+    background-color:#ffe0e0;
+    border-radius: 20px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    gap: 5px;
+}
+
+button, #display {
+    padding: 8px;
+    margin: 3px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+}
+
+#display {
+    grid-column: span 4;
+    background-color: #ffe0e9;
+    color: #333;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: #ffccd5;
+    color: #333;
+    border-radius: 40px;
+    transition: background-color 0.3s ease,
+    transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #ffb3c1;
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+#add, #subtract, #multiply, #divide, #equals, #clear, #backspace {
+    background-color: #ff99aa;
+    color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#add:hover, #subtract:hover, #multiply:hover, #divide:hover, #equals:hover, #clear:hover, #backspace:hover {
+    background-color: #ff85a1;
+}
+
+#clear, #backspace {
+    grid-column: span 1;
+}
+
+#equals {
+    grid-row: span 2;
+    grid-column: span 2;
+    background-color: #ff80ab;
+}
+
+#equals:hover {
+    background: #ff5e91;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#characters {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#characters:hover {
+    transform: scale(1.1);
+}
